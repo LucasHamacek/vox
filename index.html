@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vox</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+  </style>
+</head>
+
+<body class="font-['Inter']">
+  <header class="fixed top-0 left-0 right-0 z-40 flex items-center justify-between p-4 bg-white">
+    <h1 class="text-xl font-bold text-black">LOGO</h1>
+
+    <button id="menuBtn" class="flex flex-col justify-between w-6 h-3 md:hidden">
+      <span class="block h-0.5 w-full bg-black"></span>
+      <span class="block h-0.5 w-full bg-black"></span>
+    </button>
+  </header>
+  <nav id="mobileMenu"
+    class="fixed top-0 left-0 py-16 w-full h-screen z-50 flex flex-col bg-black text-white text-4xl font-medium space-y-10 transform translate-y-full transition-transform duration-300">
+    <!-- Botão de fechar -->
+    <button id="closeMenu" class="absolute top-1 right-3.5 text-white text-5xl font-extralight focus:outline-none">
+      &times;
+    </button>
+
+    <a href="#quem-somos" class="hover:text-gray-400 px-8 w-full">Quem somos</a>
+    <a href="#solucoes" class="hover:text-gray-400 px-8 w-full">Soluções</a>
+    <a href="#clientes" class="hover:text-gray-400 px-8 w-full">Clientes</a>
+    <a href="#equipe" class="hover:text-gray-400 px-8 w-full">Especialistas</a>
+    <a href="#contato" class="hover:text-gray-400 px-8 w-full">Contato</a>
+
+  </nav>
+  <section id="quem-somos" class="flex flex-col pt-16 px-4 text-base gap-4">
+    <div>
+      <h2 class="font-medium text-2xl">Descubra por que somos os melhores</h2>
+      <p>Lorem ipsum dolor sit amet. Aut necessitatibus labore et voluptate vero ut incidunt provident. Et enim minus ab ipsum saepe eos galisum provident ea repellat aliquam.</p>
+    </div>
+    <div class="flex flex-col gap-4">
+    <div class="max-w-64">
+      <h3 class="font-medium text-xl">x anos de experiencia</h3>
+      <p>Lorem ipsum dolor sit amet. Aut necessitatibus labore et voluptate vero ut incidunt provident. </p>
+    </div>
+    <div class="max-w-64">
+      <h3 class="font-medium text-xl">Mais de x projetos executados</h3>
+      <p>Lorem ipsum dolor sit amet. Aut necessitatibus labore et voluptate vero ut incidunt provident. </p>
+    </div>
+    <div class="max-w-64">
+      <h3 class="font-medium text-xl">x+ clientes </h3>
+      <p>Lorem ipsum dolor sit amet. Aut necessitatibus labore et voluptate vero ut incidunt provident. </p>
+    </div>
+    <div class="max-w-64">
+      <h3 class="font-medium text-xl">Lorem</h3>
+      <p>Lorem ipsum dolor sit amet. Aut necessitatibus labore et voluptate vero ut incidunt provident. </p>
+    </div>
+  </div>
+  </section>
+
+</body>
+<footer>
+
+</footer>
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const closeMenu = document.getElementById('closeMenu');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.remove('translate-y-full');
+    mobileMenu.classList.add('translate-y-0');
+    document.body.style.overflow = 'hidden';
+  });
+
+  closeMenu.addEventListener('click', () => {
+    mobileMenu.classList.remove('translate-y-0');
+    mobileMenu.classList.add('translate-y-full');
+    document.body.style.overflow = '';
+  });
+</script>
+
+
+</html>

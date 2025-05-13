@@ -8,21 +8,26 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+    html {
+      scroll-behavior: smooth;
+    }
   </style>
 </head>
 
 <body class="font-['Inter']">
-  <header id="navbar" class="fixed top-0 left-0 right-0 z-40 bg-white transition-transform duration-300">
-    <div class="max-w-6xl mx-auto w-full flex items-center justify-between px-6 py-4">
-      <img class="w-16" src="https://raw.githubusercontent.com/LucasHamacek/vox/refs/heads/main/vox-logo-black.png" alt="Vox">
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-40 px-6 py-4 bg-white transition-transform duration-300">
+    <div class="max-w-6xl mx-auto w-full flex items-center justify-between ">
+      <img class="w-16" src="https://raw.githubusercontent.com/LucasHamacek/vox/refs/heads/main/vox-logo-black.png"
+        alt="Vox">
 
       <!-- Menu Desktop -->
       <nav class="hidden md:flex space-x-8 text-black font-medium">
-        <a href="#quem-somos" class="hover:text-gray-500">Quem somos</a>
-        <a href="#solucoes" class="hover:text-gray-500">Soluções</a>
-        <a href="#clientes" class="hover:text-gray-500">Clientes</a>
-        <a href="#equipe" class="hover:text-gray-500">Especialistas</a>
-        <a href="#contato" class="hover:text-gray-500">Contato</a>
+        <a href="#quem-somos" class="hover:text-[#006eb6]">Quem somos</a>
+        <a href="#solucoes" class="hover:text-[#006eb6]">Soluções</a>
+        <a href="#clientes" class="hover:text-[#006eb6]">Clientes</a>
+        <a href="#equipe" class="hover:text-[#006eb6]">Especialistas</a>
+        <a href="#contato" class="hover:text-[#006eb6]">Contato</a>
       </nav>
 
       <!-- Botão de menu Mobile -->
@@ -42,14 +47,14 @@
       &times;
     </button>
 
-    <a href="#quem-somos" class="hover:text-gray-400 px-8 w-full">Quem somos</a>
-    <a href="#solucoes" class="hover:text-gray-400 px-8 w-full">Soluções</a>
-    <a href="#clientes" class="hover:text-gray-400 px-8 w-full">Clientes</a>
-    <a href="#equipe" class="hover:text-gray-400 px-8 w-full">Especialistas</a>
-    <a href="#contato" class="hover:text-gray-400 px-8 w-full">Contato</a>
+    <a href="#quem-somos" class="hover:text-[#006eb6] px-8 w-full">Quem somos</a>
+    <a href="#solucoes" class="hover:text-[#006eb6] px-8 w-full">Soluções</a>
+    <a href="#clientes" class="hover:text-[#006eb6] px-8 w-full">Clientes</a>
+    <a href="#equipe" class="hover:text-[#006eb6] px-8 w-full">Especialistas</a>
+    <a href="#contato" class="hover:text-[#006eb6] px-8 w-full">Contato</a>
   </nav>
 
-  <section class="bg-black text-white px-6 py-16">
+  <section id="quem-somos" class="bg-black text-white px-6 py-16">
     <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10">
 
       <!-- Título e descrição -->
@@ -99,42 +104,49 @@
   </section>
 
 
-  <section class="">
+  <section id="solucoes">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 max-w-full mx-auto">
 
       <!-- Serviço 1 -->
-      <div class="flex flex-col">
-        <div class="h-80">
+      <div class="flex flex-col group overflow-hidden">
+        <div class="h-80 over flow-hidden">
           <img src="https://raw.githubusercontent.com/LucasHamacek/vox/refs/heads/main/consultoria.jpg"
-            alt="Consultoria" class="w-full h-full object-cover filter grayscale" />
+            alt="Consultoria"
+            class="w-full h-full object-cover filter grayscale transform transition-transform duration-500 group-hover:scale-105" />
         </div>
-        <div class="bg-red-600 text-white p-4 min-h-[200px] flex flex-col">
+        <div class="bg-red-600 text-white p-4 min-h-[200px] flex flex-col relative z-10">
           <h3 class="text-2xl font-semibold mb-2">Consultoria e Treinamentos</h3>
-          <p class="text-sm">Ajudamos sua equipe a adotar ou aprimorar o uso do BIM com treinamentos personalizados e
-            consultoria especializada.</p>
+          <p class="text-sm">
+            Ajudamos sua equipe a adotar ou aprimorar o uso do BIM com treinamentos personalizados e consultoria
+            especializada.
+          </p>
         </div>
       </div>
 
       <!-- Serviço 2 -->
-      <div class="flex flex-col">
-        <div class="h-80">
+      <div class="flex flex-col group overflow-hidden">
+        <div class="h-80 over flow-hidden">
           <img src="https://raw.githubusercontent.com/LucasHamacek/vox/refs/heads/main/consultoria.jpg"
-            alt="Modelagem BIM" class="w-full h-full object-cover filter grayscale" />
+            alt="Consultoria"
+            class="w-full h-full object-cover filter grayscale transform transition-transform duration-500 group-hover:scale-105" />
         </div>
-        <div class="bg-gray-800 text-white p-4 min-h-[200px] flex flex-col">
+        <div class="bg-red-600 text-white p-4 min-h-[200px] flex flex-col relative z-10">
           <h3 class="text-2xl font-semibold mb-2">Modelagem BIM</h3>
-          <p class="text-sm">Desenvolvemos modelos digitais inteligentes e precisos, garantindo consistência e
-            fidelidade à obra.</p>
+          <p class="text-sm">
+            Desenvolvemos modelos digitais inteligentes e precisos, garantindo consistência e
+            fidelidade à obra.
+          </p>
         </div>
       </div>
 
       <!-- Serviço 3 -->
-      <div class="flex flex-col">
-        <div class="h-80">
+      <div class="flex flex-col group overflow-hidden">
+        <div class="h-80 over flow-hidden">
           <img src="https://raw.githubusercontent.com/LucasHamacek/vox/refs/heads/main/consultoria.jpg"
-            alt="Coordenação" class="w-full h-full object-cover filter grayscale" />
+            alt="Coordenação"
+            class="w-full h-full object-cover filter grayscale transform transition-transform duration-500 group-hover:scale-105" />
         </div>
-        <div class="bg-indigo-800 text-white p-4 min-h-[200px] flex flex-col">
+        <div class="bg-indigo-800 text-white p-4 min-h-[200px] flex flex-col relative z-10">
           <h3 class="text-2xl font-semibold mb-2">Compatibilização e Coordenação</h3>
           <p class="text-sm">Integramos modelos disciplinares e solucionamos conflitos antes da obra, reduzindo
             retrabalho.</p>
@@ -142,12 +154,12 @@
       </div>
 
       <!-- Serviço 4 -->
-      <div class="flex flex-col">
-        <div class="h-80">
+      <div class="flex flex-col group overflow-hidden">
+        <div class="h-80 over flow-hidden">
           <img src="https://raw.githubusercontent.com/LucasHamacek/vox/refs/heads/main/consultoria.jpg" alt="4D"
-            class="w-full h-full object-cover filter grayscale" />
+            class="w-full h-full object-cover filter grayscale transform transition-transform duration-500 group-hover:scale-105" />
         </div>
-        <div class="bg-yellow-700 text-white p-4 min-h-[200px] flex flex-col">
+        <div class="bg-yellow-700 text-white p-4 min-h-[200px] flex flex-col relative z-10">
           <h3 class="text-2xl font-semibold mb-2">Planejamento e Controle 4D</h3>
           <p class="text-sm">Vinculamos o modelo ao cronograma, criando simulações visuais para um controle de obra mais
             eficaz.</p>
@@ -155,12 +167,12 @@
       </div>
 
       <!-- Serviço 5 -->
-      <div class="flex flex-col">
-        <div class="h-80">
+      <div class="flex flex-col group overflow-hidden">
+        <div class="h-80 over flow-hidden">
           <img src="https://raw.githubusercontent.com/LucasHamacek/vox/refs/heads/main/consultoria.jpg" alt="5D"
-            class="w-full h-full object-cover filter grayscale" />
+            class="w-full h-full object-cover filter grayscale transform transition-transform duration-500 group-hover:scale-105" />
         </div>
-        <div class="bg-yellow-700 text-white p-4 min-h-[200px] flex flex-col">
+        <div class="bg-yellow-700 text-white p-4 min-h-[200px] flex flex-col relative z-10">
           <h3 class="text-2xl font-semibold mb-2">Quantitativos e Orçamento 5D</h3>
           <p class="text-sm">Extrações precisas e automáticas para orçamentos confiáveis e rastreáveis ao longo do
             projeto.</p>
@@ -171,7 +183,7 @@
   </section>
 
 
-  <section class="py-12 px-4 bg-white">
+  <section id="clientes" class="py-12 px-4 bg-white">
     <div class="max-w-6xl mx-auto">
       <h2 class="text-3xl md:text-4xl font-bold leading-tight mb-6 text-center md:text-left">
         Alguns dos nossos clientes
@@ -183,7 +195,7 @@
       <div
         class="flex flex-col md:flex-row items-center md:items-start bg-gray-100 md:bg-white hover:bg-gray-200 transition-colors p-6">
         <img
-          src="https://raw.githubusercontent.com/LucasHamacek/vox/d7979637ec7eb8a1d2dbfc51331334107486c9ee/gerdau-logo.svg"
+          src="https://raw.githubusercontent.com/LucasHamacek/vox/8c50c1161613729a15c5b90fd27784166200b0ef/gerdau-logo.svg"
           alt="Gerdau" class="w-24 h-24 object-contain mb-4 md:mb-0 md:mr-6" />
         <div class="text-center md:text-left">
           <h3 class="text-lg font-semibold">Gerdau</h3>
@@ -208,9 +220,9 @@
       <!-- Cliente 3 -->
       <div
         class="flex flex-col md:flex-row items-center md:items-start bg-gray-100 md:bg-white hover:bg-gray-200 transition-colors p-6">
-        <img src="/logos/cliente3.png" alt="Inova Projetos" class="w-24 h-24 object-contain mb-4 md:mb-0 md:mr-6" />
+        <img src="https://raw.githubusercontent.com/LucasHamacek/vox/8c50c1161613729a15c5b90fd27784166200b0ef/draft-logo.svg" alt="Inova Projetos" class="w-24 h-24 object-contain mb-4 md:mb-0 md:mr-6" />
         <div class="text-center md:text-left">
-          <h3 class="text-lg font-semibold">Inova Projetos</h3>
+          <h3 class="text-lg font-semibold">Draft Solutions</h3>
           <p class="text-sm text-gray-600 hidden md:block">Soluções personalizadas em modelagem 3D e compatibilização de
             projetos.</p>
         </div>
@@ -238,16 +250,28 @@
   const mobileMenu = document.getElementById('mobileMenu');
   const closeMenu = document.getElementById('closeMenu');
 
+  // Abre o menu
   menuBtn.addEventListener('click', () => {
     mobileMenu.classList.remove('translate-y-full');
     mobileMenu.classList.add('translate-y-0');
     document.body.style.overflow = 'hidden';
   });
 
+  // Fecha o menu (botão X)
   closeMenu.addEventListener('click', () => {
     mobileMenu.classList.remove('translate-y-0');
     mobileMenu.classList.add('translate-y-full');
     document.body.style.overflow = '';
+  });
+
+  // Fecha o menu ao clicar em qualquer link interno (âncora)
+  mobileMenu.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('translate-y-0');
+      mobileMenu.classList.add('translate-y-full');
+      document.body.style.overflow = '';
+      // A rolagem suave acontece via CSS (scroll-behavior: smooth)
+    });
   });
 </script>
 

@@ -14,7 +14,7 @@
 <body class="font-['Inter']">
   <header class="fixed top-0 left-0 right-0 z-40 flex items-center justify-between p-4 bg-white">
     <h1 class="text-xl font-bold text-black">LOGO</h1>
-
+    <!-- Botão de menu -->
     <button id="menuBtn" class="flex flex-col justify-between w-6 h-3 md:hidden">
       <span class="block h-0.5 w-full bg-black"></span>
       <span class="block h-0.5 w-full bg-black"></span>
@@ -34,29 +34,148 @@
     <a href="#contato" class="hover:text-gray-400 px-8 w-full">Contato</a>
 
   </nav>
-  <section id="quem-somos" class="flex flex-col pt-16 px-4 text-base gap-4">
-    <div>
-      <h2 class="font-medium text-2xl">Descubra por que somos os melhores</h2>
-      <p>Lorem ipsum dolor sit amet. Aut necessitatibus labore et voluptate vero ut incidunt provident. Et enim minus ab ipsum saepe eos galisum provident ea repellat aliquam.</p>
+  <section class="bg-black text-white px-6 py-16">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10">
+
+      <!-- Título e descrição -->
+      <div class="lg:col-span-1">
+        <h2 class="text-3xl md:text-4xl font-bold leading-tight mb-6">
+          Descubra por que<br />
+          somos referência em<br />
+          projetos e planejamento BIM
+        </h2>
+        <p class="text-lg text-gray-300">
+          Empresa especializada no desenvolvimento de projetos em BIM, consultoria técnica e planejamento estratégico
+          para construção civil, infraestrutura e empreendimentos corporativos.
+        </p>
+      </div>
+
+      <!-- Blocos de estatísticas -->
+      <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Bloco 1 -->
+        <div>
+          <h3 class="font-semibold text-white text-lg">Mais eficiência nos projetos</h3>
+          <p class="text-gray-300 text-sm">redução de retrabalhos e maior previsibilidade desde a concepção até a
+            execução.</p>
+        </div>
+
+        <!-- Bloco 2 -->
+        <div>
+          <h3 class="font-semibold text-white text-lg">+10 anos de experiência</h3>
+          <p class="text-gray-300 text-sm">atuando em projetos de diversas escalas, com foco em qualidade e inovação.
+          </p>
+        </div>
+
+        <!-- Bloco 3 -->
+        <div>
+          <h3 class="font-semibold text-white text-lg">Modelagens BIM completas</h3>
+          <p class="text-gray-300 text-sm">compatibilização de disciplinas, extração de quantitativos e simulação 4D e
+            5D.</p>
+        </div>
+
+        <!-- Bloco 4 -->
+        <div>
+          <h3 class="font-semibold text-white text-lg">Consultorias personalizadas</h3>
+          <p class="text-gray-300 text-sm">apoio estratégico para implementação de BIM e estruturação de processos
+            construtivos.</p>
+        </div>
+      </div>
     </div>
-    <div class="flex flex-col gap-4">
-    <div class="max-w-64">
-      <h3 class="font-medium text-xl">x anos de experiencia</h3>
-      <p>Lorem ipsum dolor sit amet. Aut necessitatibus labore et voluptate vero ut incidunt provident. </p>
+  </section>
+
+
+  <section class="">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-full mx-auto">
+      <!-- Serviço 1 -->
+      <div class="bg-red-300 flex flex-col justify-end h-64">
+        <div class="bg-red-600 text-white p-4">
+          <h3 class="text-xl font-semibold mb-2">Serviço 1</h3>
+          <p class="text-sm">Lorem ipsum dolor sit amet. Aut necessitatibus labore et voluptate vero ut incidunt
+            provident. Et enim minus ab ipsum saepe eos galisum provident ea repellat aliquam.</p>
+        </div>
+      </div>
+
+      <!-- Serviço 2 -->
+      <div class="bg-gray-300 flex flex-col justify-end h-64">
+        <div class="bg-gray-800 text-white p-4">
+          <h3 class="text-xl font-semibold mb-2">Serviço 2</h3>
+          <p class="text-sm">Lorem ipsum dolor sit amet. Aut necessitatibus labore et voluptate vero ut incidunt
+            provident. Et enim minus ab ipsum saepe eos galisum provident ea repellat aliquam.</p>
+        </div>
+      </div>
+
+      <!-- Serviço 3 -->
+      <div class="bg-indigo-300 flex flex-col justify-end h-64">
+        <div class="bg-indigo-800 text-white p-4">
+          <h3 class="text-xl font-semibold mb-2">Serviço 3</h3>
+          <p class="text-sm">Lorem ipsum dolor sit amet. Aut necessitatibus labore et voluptate vero ut incidunt
+            provident. Et enim minus ab ipsum saepe eos galisum provident ea repellat aliquam.</p>
+        </div>
+      </div>
+
+      <!-- Serviço 4 -->
+      <div class="bg-yellow-300 flex flex-col justify-end h-64">
+        <div class="bg-yellow-700 text-white p-4">
+          <h3 class="text-xl font-semibold mb-2">Serviço 4</h3>
+          <p class="text-sm">Lorem ipsum dolor sit amet. Aut necessitatibus labore et voluptate vero ut incidunt
+            provident. Et enim minus ab ipsum saepe eos galisum provident ea repellat aliquam.</p>
+        </div>
+      </div>
     </div>
-    <div class="max-w-64">
-      <h3 class="font-medium text-xl">Mais de x projetos executados</h3>
-      <p>Lorem ipsum dolor sit amet. Aut necessitatibus labore et voluptate vero ut incidunt provident. </p>
+  </section>
+
+  <section class="py-12 px-4 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold leading-tight mb-6 text-center md:text-left">
+        Alguns dos nossos clientes
+      </h2>
     </div>
-    <div class="max-w-64">
-      <h3 class="font-medium text-xl">x+ clientes </h3>
-      <p>Lorem ipsum dolor sit amet. Aut necessitatibus labore et voluptate vero ut incidunt provident. </p>
+
+    <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-6">
+      <!-- Cliente 1 -->
+      <div
+        class="flex flex-col md:flex-row items-center md:items-start bg-gray-100 md:bg-white hover:bg-gray-200 transition-colors p-6">
+        <img src="/logos/cliente1.png" alt="Construtora Alfa" class="w-16 h-16 object-contain mb-4 md:mb-0 md:mr-6" />
+        <div class="text-center md:text-left">
+          <h3 class="text-lg font-semibold">Construtora Alfa</h3>
+          <p class="text-sm text-gray-600 hidden md:block">Consultoria em BIM e planejamento de obras com foco em
+            eficiência e precisão.</p>
+        </div>
+      </div>
+
+      <!-- Cliente 2 -->
+      <div
+        class="flex flex-col md:flex-row items-center md:items-start bg-gray-100 md:bg-white hover:bg-gray-200 transition-colors p-6">
+        <img src="/logos/cliente2.png" alt="Engenharia Beta" class="w-16 h-16 object-contain mb-4 md:mb-0 md:mr-6" />
+        <div class="text-center md:text-left">
+          <h3 class="text-lg font-semibold">Engenharia Beta</h3>
+          <p class="text-sm text-gray-600 hidden md:block">Desenvolvimento de projetos BIM para empreendimentos
+            comerciais e industriais.</p>
+        </div>
+      </div>
+
+      <!-- Cliente 3 -->
+      <div
+        class="flex flex-col md:flex-row items-center md:items-start bg-gray-100 md:bg-white hover:bg-gray-200 transition-colors p-6">
+        <img src="/logos/cliente3.png" alt="Inova Projetos" class="w-16 h-16 object-contain mb-4 md:mb-0 md:mr-6" />
+        <div class="text-center md:text-left">
+          <h3 class="text-lg font-semibold">Inova Projetos</h3>
+          <p class="text-sm text-gray-600 hidden md:block">Soluções personalizadas em modelagem 3D e compatibilização de
+            projetos.</p>
+        </div>
+      </div>
+
+      <!-- Cliente 4 -->
+      <div
+        class="flex flex-col md:flex-row items-center md:items-start bg-gray-100 md:bg-white hover:bg-gray-200 transition-colors p-6">
+        <img src="/logos/cliente4.png" alt="Tech Engenharia" class="w-16 h-16 object-contain mb-4 md:mb-0 md:mr-6" />
+        <div class="text-center md:text-left">
+          <h3 class="text-lg font-semibold">Tech Engenharia</h3>
+          <p class="text-sm text-gray-600 hidden md:block">Planejamento e gestão de obras com base em metodologia BIM
+            integrada.</p>
+        </div>
+      </div>
     </div>
-    <div class="max-w-64">
-      <h3 class="font-medium text-xl">Lorem</h3>
-      <p>Lorem ipsum dolor sit amet. Aut necessitatibus labore et voluptate vero ut incidunt provident. </p>
-    </div>
-  </div>
   </section>
 
 </body>

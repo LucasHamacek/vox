@@ -265,7 +265,7 @@
 
   <section id="clientes" class="py-12 px-4 bg-white">
     <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold leading-tight mb-6 text-center md:text-left">
+      <h2 id="clientsTitle" class="text-3xl md:text-4xl font-bold leading-tight mb-6 text-center md:text-left">
         Alguns dos nossos clientes
       </h2>
     </div>
@@ -274,12 +274,11 @@
       <!-- Cliente 1 -->
       <div
         class="flex flex-col md:flex-row items-center md:items-start bg-gray-100 md:bg-white hover:bg-gray-200 transition-colors p-6">
-        <img
-          src="logos/gerdau-logo.svg"
-          alt="Gerdau" class="w-16 h-16 object-contain mb-4 md:mb-0 md:mr-6" />
+        <img src="logos/gerdau-logo.svg" alt="Gerdau" class="w-16 h-16 object-contain mb-4 md:mb-0 md:mr-6" />
         <div class="text-center md:text-left">
           <h3 class="text-lg font-semibold">Gerdau</h3>
-          <p class="text-sm text-gray-600 hidden md:block">Consultoria em BIM e planejamento de obras com foco em
+          <p id="clientGerdau" class="text-sm text-gray-600 hidden md:block">Consultoria em BIM e planejamento de obras
+            com foco em
             eficiência e precisão.</p>
         </div>
       </div>
@@ -287,12 +286,11 @@
       <!-- Cliente 2 -->
       <div
         class="flex flex-col md:flex-row items-center md:items-start bg-gray-100 md:bg-white hover:bg-gray-200 transition-colors p-6">
-        <img
-          src="logos/h5-logo.svg"
-          alt="Head 5 Engenharia" class="w-16 h-16 object-contain mb-4 md:mb-0 md:mr-6" />
+        <img src="logos/h5-logo.svg" alt="Head 5 Engenharia" class="w-16 h-16 object-contain mb-4 md:mb-0 md:mr-6" />
         <div class="text-center md:text-left">
           <h3 class="text-lg font-semibold">Head 5 Engenharia</h3>
-          <p class="text-sm text-gray-600 hidden md:block">Desenvolvimento de projetos BIM para empreendimentos
+          <p id="clientHead5" class="text-sm text-gray-600 hidden md:block">Desenvolvimento de projetos BIM para
+            empreendimentos
             comerciais e industriais.</p>
         </div>
       </div>
@@ -300,12 +298,11 @@
       <!-- Cliente 3 -->
       <div
         class="flex flex-col md:flex-row items-center md:items-start bg-gray-100 md:bg-white hover:bg-gray-200 transition-colors p-6">
-        <img
-          src="logos/draft-logo.svg"
-          alt="Draft Solutions" class="w-16 h-16 object-contain mb-4 md:mb-0 md:mr-6" />
+        <img src="logos/draft-logo.svg" alt="Draft Solutions" class="w-16 h-16 object-contain mb-4 md:mb-0 md:mr-6" />
         <div class="text-center md:text-left">
           <h3 class="text-lg font-semibold">Draft Solutions</h3>
-          <p class="text-sm text-gray-600 hidden md:block">Soluções personalizadas em modelagem 3D e compatibilização de
+          <p id="clientDraft" class="text-sm text-gray-600 hidden md:block">Soluções personalizadas em modelagem 3D e
+            compatibilização de
             projetos.</p>
         </div>
       </div>
@@ -325,7 +322,7 @@
 
   <section id="time" class="py-16 px-4 bg-white">
     <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold leading-tight mb-6 text-center md:text-left">
+      <h2 id="teamtTitle" class="text-3xl md:text-4xl font-bold leading-tight mb-6 text-center md:text-left">
         Nosso time de especialistas
       </h2>
     </div>
@@ -337,7 +334,7 @@
           class="w-full sm:w-32 sm:h-32 object-cover mb-4 sm:mb-0 sm:mr-4" />
         <div>
           <h3 class="text-lg font-semibold">João Hamacek</h3>
-          <p class="text-sm text-gray-700 mt-2">
+          <p id="team1Description" class="text-sm text-gray-700 mt-2">
             Lorem ipsum dolor sit amet. Aut necessitatibus labore et voluptate vero ut
             incidunt provident. Et enim minus ab ipsum saepe eos galisum provident.
           </p>
@@ -370,40 +367,40 @@
       <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 text-sm text-gray-700">
         <!-- Coluna 1 -->
         <div>
-          <h3 class="font-semibold mb-4">Institucional</h3>
+          <h3 id="footerInstitutional" class="font-semibold mb-4">Institucional</h3>
           <ul class="space-y-2">
-            <li><a href="#quem-somos" class="hover:underline">Sobre nós</a></li>
-            <li><a href="#time" class="hover:underline">Nosso time</a></li>
+            <li><a id="footerAbout" href="#quem-somos" class="hover:underline">Sobre nós</a></li>
+            <li><a id="footerTeam" href="#time" class="hover:underline">Nosso time</a></li>
           </ul>
         </div>
 
         <!-- Coluna 2 -->
         <div>
-          <h3 class="font-semibold mb-4">Soluções</h3>
+          <h3 id="footerSolutions" class="font-semibold mb-4">Soluções</h3>
           <ul class="space-y-2">
-            <li><a href="#solucoes" class="hover:underline">Consultoria e Treinamentos</a></li>
-            <li><a href="#solucoes" class="hover:underline">Modelagem BIM</a></li>
-            <li><a href="#solucoes" class="hover:underline">Compatibilização</a></li>
-            <li><a href="#solucoes" class="hover:underline">Planejamento 4D</a></li>
-            <li><a href="#solucoes" class="hover:underline">Orçamento 5D</a></li>
+            <li><a id="footerConsulting" href="#solucoes" class="hover:underline">Consultoria e Treinamentos</a></li>
+            <li><a id="footerBim" href="#solucoes" class="hover:underline">Modelagem BIM</a></li>
+            <li><a id="footerCompat" href="#solucoes" class="hover:underline">Compatibilização</a></li>
+            <li><a id="footer4d" href="#solucoes" class="hover:underline">Planejamento 4D</a></li>
+            <li><a id="footer5d" href="#solucoes" class="hover:underline">Orçamento 5D</a></li>
           </ul>
         </div>
 
         <!-- Coluna 3 -->
         <div>
-          <h3 class="font-semibold mb-4">Legal</h3>
+          <h3 id="footerLegal" class="font-semibold mb-4">Legal</h3>
           <ul class="space-y-2">
-            <li><a href="#politica" class="hover:underline">Política de Privacidade</a></li>
-            <li><a href="#termos" class="hover:underline">Termos de Uso</a></li>
+            <li><a id="footerPrivacy" href="#politica" class="hover:underline">Política de Privacidade</a></li>
+            <li><a id="footerTerms" href="#termos" class="hover:underline">Termos de Uso</a></li>
           </ul>
         </div>
 
         <!-- Coluna 4 -->
         <div>
-          <h3 class="font-semibold mb-4">Fale conosco</h3>
+          <h3 id="footerContactTitle" class="font-semibold mb-4">Fale conosco</h3>
           <ul class="space-y-2">
-            <li><a href="#politica" class="hover:underline">(31) 1234-5678</a></li>
-            <li><a href="#termos" class="hover:underline">contato@empresa.com</a></li>
+            <li><a id="footerPhone" href="#politica" class="hover:underline">(31) 1234-5678</a></li>
+            <li><a id="footerEmail" href="#termos" class="hover:underline">contato@empresa.com</a></li>
           </ul>
         </div>
       </div>
@@ -430,7 +427,7 @@
           </svg>
         </div>
       </div>
-      <p>&copy; 2025 Vox. Todos os direitos reservados.</p>
+      <p id="footerCopy">&copy; 2025 Vox. Todos os direitos reservados.</p>
     </div>
   </section>
 

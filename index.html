@@ -23,16 +23,11 @@
 
       <!-- Menu Desktop -->
       <nav class="hidden md:flex space-x-8 text-black font-medium">
-        <a href="#quem-somos" class="lang pt hover:text-[#006eb6]">Quem somos</a>
-        <a href="#quem-somos" class="lang en hidden hover:text-[#006eb6]">About us</a>
-        <a href="#solucoes" class="lang pt hover:text-[#006eb6]">Soluções</a>
-        <a href="#solucoes" class="lang en hidden hover:text-[#006eb6]">Solutions</a>
-        <a href="#clientes" class="lang pt hover:text-[#006eb6]">Clientes</a>
-        <a href="#clientes" class="lang en hidden hover:text-[#006eb6]">Clients</a>
-        <a href="#time" class="lang pt hover:text-[#006eb6]">Especialistas</a>
-        <a href="#time" class="lang en hidden hover:text-[#006eb6]">Experts</a>
-        <a href="#mapa-do-site" class="lang pt hover:text-[#006eb6]">Contato</a>
-        <a href="#mapa-do-site" class="lang en hidden hover:text-[#006eb6]">Contact</a>
+        <a id="linkAbout" href="#quem-somos" class="hover:text-[#006eb6]">Quem somos</a>
+        <a id="linkSolutions" href="#solucoes" class="hover:text-[#006eb6]">Soluções</a>
+        <a id="linkClients" href="#clientes" class="hover:text-[#006eb6]">Clientes</a>
+        <a id="linkTeam" href="#time" class="hover:text-[#006eb6]">Especialistas</a>
+        <a id="linkContact" href="#mapa-do-site" class="hover:text-[#006eb6]">Contato</a>
       </nav>
 
       <!-- Botão de menu Mobile -->
@@ -52,33 +47,22 @@
       &times;
     </button>
 
-    <a href="#quem-somos" class="lang pt hover:text-[#006eb6] px-8 w-full">Quem somos</a>
-    <a href="#quem-somos" class="lang en hidden hover:text-[#006eb6] px-8 w-full">About Us</a>
-    <a href="#solucoes" class="lang pt hover:text-[#006eb6] px-8 w-full">Soluções</a>
-    <a href="#solucoes" class="lang en hidden hover:text-[#006eb6] px-8 w-full">Solutions</a>
-    <a href="#clientes" class="lang pt hover:text-[#006eb6] px-8 w-full">Clientes</a>
-    <a href="#clientes" class="lang en hidden hover:text-[#006eb6] px-8 w-full">Clients</a>
-    <a href="#time" class="lang pt hover:text-[#006eb6] px-8 w-full">Especialistas</a>
-    <a href="#time" class="lang en hidden hover:text-[#006eb6] px-8 w-full">Experts</a>
-    <a href="#mapa-do-site" class="lang pt hover:text-[#006eb6] px-8 w-full">Contato</a>
-    <a href="#mapa-do-site" class="lang en hidden hover:text-[#006eb6] px-8 w-full">Contact</a>
+    <a id="linkAbout" href="#quem-somos" class="hover:text-[#006eb6] px-8 w-full">Quem somos</a>
+    <a id="linkSolutions" href="#solucoes" class="hover:text-[#006eb6] px-8 w-full">Soluções</a>
+    <a id="linkClients" href="#clientes" class="hover:text-[#006eb6] px-8 w-full">Clientes</a>
+    <a id="linkTeam" href="#time" class="hover:text-[#006eb6] px-8 w-full">Especialistas</a>
+    <a id="linkContact" href="#mapa-do-site" class="hover:text-[#006eb6] px-8 w-full">Contato</a>
   </nav>
 
   <section class="relative h-[70vh] bg-cover bg-center"
     style="background-image: url(https://www.environmentalsafetyupdate.com/wp-content/uploads/sites/28/2023/07/iStock-1125525958-scaled.jpg);">
     <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
       <div class="text-center text-white px-4 md:px-10">
-        <h1 class="lang pt text-4xl md:text-5xl font-bold mb-4">
+        <h1 id="mainTitle" class="text-4xl md:text-5xl font-bold mb-4">
           Transformamos projetos em soluções inteligentes.
         </h1>
-        <h1 class="lang en hidden text-4xl md:text-5xl font-bold mb-4">
-          We turn projects into smart solutions.
-        </h1>
-        <p class="lang pt text-lg md:text-2xl font-light">
+        <p id="mainDescription" class="text-lg md:text-2xl font-light">
           Com tecnologia e inovação, impulsionamos a construção do futuro.
-        </p>
-        <p class="lang en hidden text-lg md:text-2xl font-light">
-          Using technology and innovation, we drive the construction of the future.
         </p>
       </div>
     </div>
@@ -89,12 +73,12 @@
 
       <!-- Título e descrição -->
       <div class="lg:col-span-1">
-        <h2 class="text-3xl md:text-4xl font-medium leading-tight mb-6">
+        <h2 id="aboutTitle" class="text-3xl md:text-4xl font-medium leading-tight mb-6">
           Descubra por que<br />
           somos referência em<br />
           projetos e planejamento BIM
         </h2>
-        <p class="text-lg text-gray-300 font-normal">
+        <p id="aboutDesc" class="text-lg text-gray-300 font-normal">
           Somos especializados no desenvolvimento de projetos em BIM, consultoria técnica e planejamento estratégico
           para construção civil, infraestrutura e empreendimentos corporativos.
         </p>
@@ -104,29 +88,33 @@
       <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
         <!-- Bloco 1 -->
         <div>
-          <h3 class="font-semibold text-white text-lg">Mais eficiência nos projetos</h3>
-          <p class="text-gray-300 text-base">redução de retrabalhos e maior previsibilidade desde a concepção até a
+          <h3 id="stat1Title" class="font-semibold text-white text-lg">Mais eficiência nos projetos</h3>
+          <p id="stat1Text" class="text-gray-300 text-base">redução de retrabalhos e maior previsibilidade desde a
+            concepção até a
             execução.</p>
         </div>
 
         <!-- Bloco 2 -->
         <div>
-          <h3 class="font-semibold text-white text-lg">+10 anos de experiência</h3>
-          <p class="text-gray-300 text-base">atuando em projetos de diversas escalas, com foco em qualidade e inovação.
+          <h3 id="stat2Title" class="font-semibold text-white text-lg">+10 anos de experiência</h3>
+          <p id="stat2Text" class="text-gray-300 text-base">atuando em projetos de diversas escalas, com foco em
+            qualidade e inovação.
           </p>
         </div>
 
         <!-- Bloco 3 -->
         <div>
-          <h3 class="font-semibold text-white text-lg">Modelagens BIM completas</h3>
-          <p class="text-gray-300 text-base">compatibilização de disciplinas, extração de quantitativos e simulação 4D e
+          <h3 id="stat3Title" class="font-semibold text-white text-lg">Modelagens BIM completas</h3>
+          <p id="stat3Text" class="text-gray-300 text-base">compatibilização de disciplinas, extração de quantitativos e
+            simulação 4D e
             5D.</p>
         </div>
 
         <!-- Bloco 4 -->
         <div>
-          <h3 class="font-semibold text-white text-lg">Consultorias personalizadas</h3>
-          <p class="text-gray-300 text-base">apoio estratégico para implementação de BIM e estruturação de processos
+          <h3 id="stat4Title" class="font-semibold text-white text-lg">Consultorias personalizadas</h3>
+          <p id="stat4Text" class="text-gray-300 text-base">apoio estratégico para implementação de BIM e estruturação
+            de processos
             construtivos.</p>
         </div>
       </div>
@@ -432,6 +420,7 @@
           class="border border-black bg-transparent hover:bg-white px-4 py-2 text-sm w-full md:w-auto pr-10 appearance-none">
           <option value="pt">Português</option>
           <option value="en">English</option>
+          <option value="es">Español</option>
         </select>
 
         <!-- Ícone personalizado (seta para baixo) -->
@@ -447,65 +436,8 @@
 
 </footer>
 
-<script>
-  const menuBtn = document.getElementById('menuBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
-  const closeMenu = document.getElementById('closeMenu');
-
-  // Abre o menu
-  menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.remove('translate-y-full');
-    mobileMenu.classList.add('translate-y-0');
-    document.body.style.overflow = 'hidden';
-  });
-
-  // Fecha o menu (botão X)
-  closeMenu.addEventListener('click', () => {
-    mobileMenu.classList.remove('translate-y-0');
-    mobileMenu.classList.add('translate-y-full');
-    document.body.style.overflow = '';
-  });
-
-  // Fecha o menu ao clicar em qualquer link interno (âncora)
-  mobileMenu.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.remove('translate-y-0');
-      mobileMenu.classList.add('translate-y-full');
-      document.body.style.overflow = '';
-      // A rolagem suave acontece via CSS (scroll-behavior: smooth)
-    });
-  });
-</script>
-
-<script>
-  let lastScrollTop = 0;
-  const navbar = document.getElementById("navbar");
-
-  window.addEventListener("scroll", function () {
-    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (currentScroll > lastScrollTop) {
-      // Rolando para baixo
-      navbar.style.transform = "translateY(-100%)";
-    } else {
-      // Rolando para cima
-      navbar.style.transform = "translateY(0)";
-    }
-
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // evita valores negativos
-  });
-</script>
-
-<script>
-  document.getElementById('languageSwitcher').addEventListener('change', function () {
-    const lang = this.value;
-    document.querySelectorAll('.lang').forEach(el => {
-      el.classList.add('hidden');
-    });
-    document.querySelectorAll(`.lang.${lang}`).forEach(el => {
-      el.classList.remove('hidden');
-    });
-  });
-</script>
+<script src="js/lang.js" defer></script>
+<script src="js/menu.js" defer></script>
+<script src="js/navbar-scroll.js" defer></script>
 
 </html>

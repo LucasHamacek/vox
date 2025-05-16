@@ -37,7 +37,7 @@ const translations = {
     footerPrivacy: "Política de Privacidade",
     footerTerms: "Termos de Uso",
     footerContactTitle: "Fale conosco",
-    footerPhone: "(31) 1234-5678",
+    footerPhone: "+55 (31) 1234-5678",
     footerEmail: "contato@empresa.com",
     footerCopy: "© 2025 Vox. Todos os direitos reservados"
   },
@@ -79,7 +79,7 @@ const translations = {
     footerPrivacy: "Privacy Policy",
     footerTerms: "Terms of Use",
     footerContactTitle: "Contact us",
-    footerPhone: "(31) 1234-5678",
+    footerPhone: "+55 (31) 1234-5678",
     footerEmail: "contato@empresa.com",
     footerCopy: "© 2025 Vox. All rights reserved."
   },
@@ -121,7 +121,7 @@ const translations = {
     footerPrivacy: "Política de Privacidad",
     footerTerms: "Términos de Uso",
     footerContactTitle: "Contáctanos",
-    footerPhone: "(31) 1234-5678",
+    footerPhone: "+55 (31) 1234-5678",
     footerEmail: "contato@empresa.com",
     footerCopy: "© 2025 Vox. Todos los derechos reservados."
   }
@@ -162,7 +162,3 @@ switchers.forEach(switcher => {
 const defaultLang = localStorage.getItem('lang') || 'pt';
 switchLanguage(defaultLang);
 switchers.forEach(sw => sw.value = defaultLang);
-
-
-// Carrega o idioma padrão (Português)
-switchLanguage('pt');

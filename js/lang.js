@@ -23,7 +23,7 @@ const translations = {
     clientDraft: "Soluções personalizadas em modelagem 3D e compatibilização de projetos.",
     clientTech: "Planejamento e gestão de obras com base em metodologia BIM integrada.",
     teamtTitle: "Nosso time de especialistas",
-    team1Description: "",
+    team1Text: "",
     footerInstitutional: "Institucional",
     footerAbout: "Sobre nós",
     footerTeam: "Nosso time",
@@ -127,18 +127,42 @@ const translations = {
   }
 };
 
-const switcher = document.getElementById('languageSwitcher');
+const switchers = document.querySelectorAll('#languageSwitcher, #languageSelectHeader');
 
-switcher.addEventListener('change', function () {
-  const selectedLang = this.value;
-
+// Função para aplicar traduções
+function switchLanguage(lang) {
   document.querySelectorAll('[id]').forEach(el => {
     const id = el.id;
-    if (translations[selectedLang][id]) {
-      el.textContent = translations[selectedLang][id];
+    if (translations[lang] && translations[lang][id]) {
+      el.textContent = translations[lang][id];
     }
   });
+
+  // Armazena a escolha (opcional)
+  localStorage.setItem('lang', lang);
+}
+
+// Listener para todos os switchers
+switchers.forEach(switcher => {
+  switcher.addEventListener('change', function () {
+    const selectedLang = this.value;
+
+    switchLanguage(selectedLang);
+
+    // Sincroniza os outros selects
+    switchers.forEach(other => {
+      if (other !== this) {
+        other.value = selectedLang;
+      }
+    });
+  });
 });
+
+// Carrega idioma salvo ou padrão
+const defaultLang = localStorage.getItem('lang') || 'pt';
+switchLanguage(defaultLang);
+switchers.forEach(sw => sw.value = defaultLang);
+
 
 // Carrega o idioma padrão (Português)
 switchLanguage('pt');

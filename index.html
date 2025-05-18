@@ -24,7 +24,7 @@
 <body class="font-['Inter']">
   <header id="navbar" class="fixed top-0 left-0 right-0 z-40 px-6 py-4 bg-white transition-transform duration-300">
     <div class="max-w-6xl mx-auto w-full flex items-center justify-between">
-      <img class="w-16" src="logos/vox-logo-black.svg" alt="Vox">
+      <a href="#home"><img class="w-16" src="logos/vox-logo-black.svg" alt="Vox"></a>
 
       <!-- Menu Desktop + Idioma/Telefone -->
       <div class="hidden md:flex items-center space-x-8 text-black font-medium">
@@ -53,7 +53,7 @@
             </select>
           </div>
 
-          
+
           <!-- Telefone 
           <div class="flex items-center gap-2 text-sm">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -94,18 +94,18 @@
     <div class="px-8 mt-auto">
       <!-- Idioma Mobile -->
       <div class="relative ">
-          <div class="flex relative inline-block gap-2 text-left">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="size-6">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
-            </svg>
-            <select class="text-sm bg-black text-white" id="languageSelectHeader">
-              <option value="pt">Português</option>
-              <option value="en">English</option>
-              <option value="es">Español</option>
-            </select>
-          </div>
+        <div class="flex relative inline-block gap-2 text-left">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
+          </svg>
+          <select class="text-sm bg-black text-white" id="languageSelectHeader">
+            <option value="pt">Português</option>
+            <option value="en">English</option>
+            <option value="es">Español</option>
+          </select>
+        </div>
       </div>
 
       <!-- Telefone Mobile 
@@ -121,7 +121,7 @@
 
   </nav>
 
-  <section class="relative h-[70vh] bg-cover bg-center"
+  <section id="home" class="relative h-[70vh] bg-cover bg-center"
     style="background-image: url(https://www.environmentalsafetyupdate.com/wp-content/uploads/sites/28/2023/07/iStock-1125525958-scaled.jpg);">
     <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
       <div class="text-center text-white px-4 md:px-10">
@@ -147,7 +147,7 @@
         </h2>
         <p id="aboutDesc" class="text-lg text-gray-300 font-normal">
           Somos especializados no desenvolvimento de projetos em BIM, consultoria técnica e planejamento estratégico
-          para construção civil, infraestrutura e empreendimentos corporativos.
+          voltados para o setor industrial, incluindo plantas, instalações e empreendimentos de grande porte.
         </p>
       </div>
 
@@ -190,9 +190,9 @@
 
 
   <section id="solucoes">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 max-w-full mx-auto items-stretch">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-full mx-auto items-stretch">
 
-      <!-- Serviço 1 -->
+      <!-- Serviço 1
       <div class="flex flex-col group overflow-hidden h-full">
         <div class="h-80 overflow-hidden">
           <img src="https://raw.githubusercontent.com/LucasHamacek/vox/refs/heads/main/consultoria.jpg"
@@ -218,15 +218,16 @@
             </button>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- Serviço 2 -->
       <div class="flex flex-col group overflow-hidden h-full">
+        <!-- Imagem
         <div class="h-80 overflow-hidden">
           <img src="https://raw.githubusercontent.com/LucasHamacek/vox/refs/heads/main/consultoria.jpg"
             alt="Modelagem BIM"
             class="w-full h-full object-cover filter grayscale transform transition-transform duration-500 group-hover:scale-105" />
-        </div>
+        </div> -->
         <div class="bg-[#C4DAE8] text-black px-4 py-8 md:p-8 flex flex-col flex-1 relative z-10 justify-between">
           <div>
             <h3 class="text-xl font-medium mb-2">Modelagem BIM</h3>
@@ -249,16 +250,18 @@
 
       <!-- Serviço 3 -->
       <div class="flex flex-col group overflow-hidden h-full">
+        <!-- Imagem 
         <div class="h-80 overflow-hidden">
           <img src="https://raw.githubusercontent.com/LucasHamacek/vox/refs/heads/main/consultoria.jpg"
             alt="Coordenação"
             class="w-full h-full object-cover filter grayscale transform transition-transform duration-500 group-hover:scale-105" />
-        </div>
+        </div> -->
         <div class="bg-[#3189C3] text-black px-4 py-8 md:p-8 flex flex-col flex-1 relative z-10 justify-between">
           <div>
             <h3 class="text-xl font-medium mb-2">Compatibilização e Coordenação</h3>
             <p class="text-base font-light">
-              Integramos modelos disciplinares e solucionamos conflitos antes da obra, reduzindo retrabalho.
+              Integramos modelos multidisciplinares e resolvemos conflitos antes da obra, evitando retrabalho e
+              reduzindo custos.
             </p>
           </div>
           <div class="flex justify-end text-left pt-8">
@@ -276,10 +279,11 @@
 
       <!-- Serviço 4 -->
       <div class="flex flex-col group overflow-hidden h-full">
+        <!-- Imagem
         <div class="h-80 overflow-hidden">
           <img src="https://raw.githubusercontent.com/LucasHamacek/vox/refs/heads/main/consultoria.jpg" alt="4D"
             class="w-full h-full object-cover filter grayscale transform transition-transform duration-500 group-hover:scale-105" />
-        </div>
+        </div> -->
         <div class="bg-[#93BFDC] text-black px-4 py-8 md:p-8 flex flex-col flex-1 relative z-10 justify-between">
           <div>
             <h3 class="text-xl font-medium mb-2">Planejamento e Controle 4D</h3>
@@ -302,10 +306,11 @@
 
       <!-- Serviço 5 -->
       <div class="flex flex-col group overflow-hidden h-full">
+        <!-- Imagem
         <div class="h-80 overflow-hidden">
           <img src="https://raw.githubusercontent.com/LucasHamacek/vox/refs/heads/main/consultoria.jpg" alt="5D"
             class="w-full h-full object-cover filter grayscale transform transition-transform duration-500 group-hover:scale-105" />
-        </div>
+        </div> -->
         <div class="bg-[#62A4CF] text-black px-4 py-8 md:p-8 flex flex-col flex-1 relative z-10 justify-between">
           <div>
             <h3 class="text-xl font-medium mb-2">Quantitativos e Orçamento 5D</h3>
@@ -445,11 +450,11 @@
         <div>
           <h3 id="footerSolutions" class="font-semibold mb-4">Soluções</h3>
           <ul class="space-y-2">
-            <li><a id="footerConsulting" href="#solucoes" class="hover:underline">Consultoria e Treinamentos</a></li>
-            <li><a id="footerBim" href="#solucoes" class="hover:underline">Modelagem BIM</a></li>
-            <li><a id="footerCompat" href="#solucoes" class="hover:underline">Compatibilização</a></li>
-            <li><a id="footer4d" href="#solucoes" class="hover:underline">Planejamento 4D</a></li>
-            <li><a id="footer5d" href="#solucoes" class="hover:underline">Orçamento 5D</a></li>
+            <!-- Serviço 1 <li><a id="footerConsulting" href="#solucoes" class="hover:underline">Consultoria e Treinamentos</a></li> -->
+            <!-- Serviço 2 --> <li><a id="footerBim" href="#solucoes" class="hover:underline">Modelagem BIM</a></li>
+            <!-- Serviço 3 --> <li><a id="footerCompat" href="#solucoes" class="hover:underline">Compatibilização</a></li>
+            <!-- Serviço 4 --> <li><a id="footer4d" href="#solucoes" class="hover:underline">Planejamento 4D</a></li>
+            <!-- Serviço 5 --> <li><a id="footer5d" href="#solucoes" class="hover:underline">Orçamento 5D</a></li>
           </ul>
         </div>
 

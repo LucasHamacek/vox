@@ -12,17 +12,11 @@
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="Vox" />
   <link rel="manifest" href="favicon/site.webmanifest" />
+  <link rel="stylesheet" href="style.css">
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
 </head>
 
-<body class="font-['Inter']">
+<body class="font-['Inter'] text-[#111112]">
   <header id="navbar" class="fixed top-0 left-0 right-0 z-40 px-6 py-4 bg-white transition-transform duration-300">
     <div class="max-w-6xl mx-auto w-full flex items-center justify-between">
       <a href="#home"><img class="w-16" src="logos/vox-logo-black.svg" alt="Vox"></a>
@@ -79,7 +73,7 @@
 
   <!-- Menu Mobile -->
   <nav id="mobileMenu"
-    class="fixed top-0 left-0 py-16 w-full h-screen z-50 flex flex-col bg-black text-white text-4xl font-medium space-y-10 transform translate-y-full transition-transform duration-300 md:hidden">
+    class="fixed top-0 left-0 py-16 w-full h-screen z-50 flex flex-col bg-[#111112] text-white text-4xl font-medium space-y-10 transform translate-y-full transition-transform duration-300 md:hidden">
     <!-- Botão de fechar -->
     <button id="closeMenu" class="absolute top-1 right-4 text-white text-5xl font-extralight focus:outline-none">
       &times;
@@ -101,7 +95,7 @@
             <path stroke-linecap="round" stroke-linejoin="round"
               d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
           </svg>
-          <select class="text-sm bg-black text-white" id="languageSelectHeader">
+          <select class="text-sm bg-[#111112] text-white" id="languageSelectHeader">
             <option value="pt">Português</option>
             <option value="en">English</option>
             <option value="es">Español</option>
@@ -138,7 +132,7 @@
   </section>
 
   <!-- Seção sobre nós -->
-  <section id="quem-somos" class="bg-black text-white px-6 py-16">
+  <section id="quem-somos" class="bg-[#111112] text-white px-6 py-16">
     <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10">
 
       <!-- Título e descrição -->
@@ -212,9 +206,9 @@
             </p>
           </div>
           <div class="flex justify-end text-left pt-8">
-            <button class="flex items-center">
+            <button class="flex items-center open-modal" data-service="1">
               <span id="learnMoreButton" class="text-black text-sm mr-2">Saiba mais</span>
-              <span class="w-8 h-8 rounded-full bg-black flex items-center justify-center">
+              <span class="w-8 h-8 rounded-full bg-[#111112] flex items-center justify-center">
                 <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                 </svg>
@@ -241,9 +235,9 @@
             </p>
           </div>
           <div class="flex justify-end text-left pt-8">
-            <button class="flex items-center">
+            <button class="flex items-center open-modal" data-service="2">
               <span id="learnMoreButton" class="text-black text-sm mr-2">Saiba mais</span>
-              <span class="w-8 h-8 rounded-full bg-black flex items-center justify-center">
+              <span class="w-8 h-8 rounded-full bg-[#111112] flex items-center justify-center">
                 <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                 </svg>
@@ -271,9 +265,9 @@
             </p>
           </div>
           <div class="flex justify-end text-left pt-8">
-            <button class="flex items-center">
+            <button class="flex items-center open-modal" data-service="3">
               <span id="learnMoreButton" class="text-black text-sm mr-2">Saiba mais</span>
-              <span class="w-8 h-8 rounded-full bg-black flex items-center justify-center">
+              <span class="w-8 h-8 rounded-full bg-[#111112] flex items-center justify-center">
                 <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                 </svg>
@@ -300,9 +294,9 @@
             </p>
           </div>
           <div class="flex justify-end text-left pt-8">
-            <button class="flex items-center">
+            <button class="flex items-center open-modal" data-service="4">
               <span id="learnMoreButton" class="text-black text-sm mr-2">Saiba mais</span>
-              <span class="w-8 h-8 rounded-full bg-black flex items-center justify-center">
+              <span class="w-8 h-8 rounded-full bg-[#111112] flex items-center justify-center">
                 <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                 </svg>
@@ -328,9 +322,9 @@
             </p>
           </div>
           <div class="flex justify-end text-left pt-8">
-            <button class="flex items-center">
+            <button class="flex items-center open-modal" data-service="5">
               <span id="learnMoreButton" class="text-black text-sm mr-2">Saiba mais</span>
-              <span class="w-8 h-8 rounded-full bg-black flex items-center justify-center">
+              <span class="w-8 h-8 rounded-full bg-[#111112] flex items-center justify-center">
                 <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                 </svg>
@@ -356,9 +350,9 @@
             </p>
           </div>
           <div class="flex justify-end text-left pt-8">
-            <button class="flex items-center">
+            <button class="flex items-center open-modal" data-service="6">
               <span id="learnMoreButton" class="text-black text-sm mr-2">Saiba mais</span>
-              <span class="w-8 h-8 rounded-full bg-black flex items-center justify-center">
+              <span class="w-8 h-8 rounded-full bg-[#111112] flex items-center justify-center">
                 <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                 </svg>
@@ -508,6 +502,26 @@
     </div>
   </section>
 
+  <!-- Modal -->
+  <div id="serviceModal"
+    class="fixed inset-0 z-50 flex items-end md:items-center justify-center bg-black bg-opacity-70 hidden">
+    <div class="bg-white w-full md:max-w-3xl md:w-full p-0 relative overflow-hidden shadow-lg
+            md:flex md:flex-row flex-col animate-slideUp">
+      <button id="closeModal"
+        class="absolute top-2 right-2 text-gray-500 hover:text-black text-2xl z-10">&times;</button>
+      <!-- Imagem (50% desktop, topo no mobile) -->
+      <div class="w-full md:w-1/2 aspect-[4/3] md:aspect-auto h-48 md:h-auto flex-shrink-0">
+        <img id="modalImg" src="image/placeholder.jpg" alt="Imagem do serviço"
+          class="object-cover w-full h-full">
+      </div>
+      <!-- Texto -->
+      <div class="w-full md:w-1/2 p-6 flex flex-col justify-center max-h-[60vh] md:max-h-[80vh] overflow-y-auto">
+        <h2 id="modalTitle" class="text-2xl font-bold mb-4"></h2>
+        <p id="modalText" class="text-base text-gray-700"></p>
+      </div>
+    </div>
+  </div>
+
 </body>
 
 <footer>
@@ -593,5 +607,6 @@
 <script src="js/menu.js" defer></script>
 <script src="js/navbar-scroll.js" defer></script>
 <script src="js/equalize-cards.js" defer></script>
+<script src="js/modal.js" defer></script>
 
 </html>

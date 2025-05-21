@@ -39,6 +39,8 @@ function openModal(idx) {
     document.getElementById('modalTitle').textContent = serviceDetails[idx].title;
     document.getElementById('modalText').textContent = serviceDetails[idx].text;
     document.getElementById('modalImg').src = serviceDetails[idx].img;
+    document.getElementById('serviceModal').classList.remove('hidden');
+    document.body.classList.add('overflow-hidden'); // Esconde a barra de rolagem do body
     modal.classList.remove('hidden');
     modalContent.classList.remove('animate-slideDown', 'animate-fadeOutScale', 'animate-slideUp', 'animate-fadeInScale');
     if (window.innerWidth >= 768) {
@@ -60,6 +62,7 @@ function closeModal() {
         modalContent.classList.remove('animate-slideDown', 'animate-fadeOutScale');
         modalContent.removeEventListener('animationend', handler);
     });
+    document.body.classList.remove('overflow-hidden'); // Mostra a barra de rolagem do body
 }
 
 // Eventos para abrir o modal

@@ -31,6 +31,38 @@ const serviceDetails = [
     }
 ];
 
+const serviceClients = [
+    // Para cada serviço, um array de empresas (ou vazio)
+    // Serviço 1
+    [
+        { src: 'logos/gerdau-logo-mini.svg', alt: 'Gerdau' },
+        { src: 'logos/usiminas-logo-mini.svg', alt: 'Usiminas' },
+        { src: 'logos/h5-logo-mini.svg', alt: 'Head5 Engenharia' }
+    ],
+    // Serviço 2
+    [
+        { src: 'logos/draft-logo-mini.svg', alt: 'Draft Solutions' }
+    ],
+    // Serviço 3
+    [
+        { src: 'logos/h5-logo-mini.svg', alt: 'Head5 Engenharia' }
+    ],
+    // Serviço 4
+    [
+        { src: 'logos/horizonte-logo-mini.svg', alt: 'Horizonte Minerals' },
+        { src: 'logos/draft-logo-mini.svg', alt: 'Draft Solutions' }
+    ],
+    // Serviço 5
+    [
+        { src: 'logos/arcelor-logo-mini.svg', alt: 'ArcelorMittal' },
+        { src: 'logos/draft-logo-mini.svg', alt: 'Draft Solutions' }
+    ],
+    // Serviço 6
+    [
+        { src: 'logos/h5-logo-mini.svg', alt: 'Head5 Engenharia' }
+    ]
+];
+
 const modal = document.getElementById('serviceModal');
 const modalContent = modal.querySelector('div.bg-white');
 const closeModalBtn = document.getElementById('closeModal');
@@ -41,6 +73,22 @@ function openModal(idx) {
     document.getElementById('modalImg').src = serviceDetails[idx].img;
     document.getElementById('serviceModal').classList.remove('hidden');
     document.body.classList.add('overflow-hidden'); // Esconde a barra de rolagem do body
+    modal.classList.remove('hidden');
+    modalContent.classList.remove('animate-slideDown', 'animate-fadeOutScale', 'animate-slideUp', 'animate-fadeInScale');
+    if (window.innerWidth >= 768) {
+        modalContent.classList.add('animate-fadeInScale');
+    } else {
+        modalContent.classList.add('animate-slideUp');
+    }
+
+    const clients = serviceClients[idx] || [];
+    const modalClients = document.getElementById('modalClients');
+    modalClients.innerHTML = clients.length
+        ? clients.map(c => `<img src="${c.src}" alt="${c.alt}" class="w-10 h-10 rounded-full object-contain" />`).join('')
+        : '<span class="text-gray-400 text-sm">Nenhuma empresa cadastrada para este serviço.</span>';
+
+    document.getElementById('serviceModal').classList.remove('hidden');
+    document.body.classList.add('overflow-hidden');
     modal.classList.remove('hidden');
     modalContent.classList.remove('animate-slideDown', 'animate-fadeOutScale', 'animate-slideUp', 'animate-fadeInScale');
     if (window.innerWidth >= 768) {

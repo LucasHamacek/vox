@@ -14,12 +14,22 @@ html {
 }
 
 @media (max-width: 767px) {
-  #serviceModal > .bg-white {
-    height: 80vh;
-    max-height: 80vh;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
+    #serviceModal>.bg-white {
+        width: 100vw;
+        left: 0;
+        right: 0;
+        height: 80vh;
+        max-height: 80vh;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        position: relative;
+    }
+
+    #serviceModal .overflow-y-auto {
+        overflow-y: visible !important;
+        /* Garante que o texto não force scroll interno */
+        max-height: none !important;
+    }
 }
 
 @keyframes slideUp {

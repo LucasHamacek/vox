@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta name="color-scheme" content="light only">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="dynamicTitle">Coordenação e Compatibilização | Vox</title>
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Vox" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="font-['Inter'] text-[#111112]">
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-40 px-6 py-4 bg-white transition-transform duration-300">
+        <div class="max-w-6xl mx-auto w-full flex items-center justify-between">
+            <a href="index.html"><img class="w-16" src="logos/vox-logo-black.svg" alt="Vox"></a>
+
+            <!-- Menu Desktop + Idioma -->
+            <div class="hidden md:flex items-center space-x-8 text-black font-medium">
+                <!-- Navegação -->
+                <nav class="flex space-x-8">
+                    <a id="linkAbout" href="#quem-somos" class="hover:text-[#006eb6]">Quem somos</a>
+                    <a id="linkSolutions" href="#solucoes" class="hover:text-[#006eb6]">Soluções</a>
+                    <!-- Hiden
+                    <a id="linkClients" href="#clientes" class="hover:text-[#006eb6]">Clientes</a>
+                    <a id="linkTeam" href="#time" class="hover:text-[#006eb6]">Especialistas</a> -->
+                    <a id="linkContact" href="#mapa-do-site" class="hover:text-[#006eb6]">Contato</a>
+                </nav>
+
+                <!-- Idioma -->
+                <div class="flex items-center space-x-4 border-l pl-4 ml-4">
+                    <div class="flex relative inline-block gap-2 text-left">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
+                        </svg>
+                        <select class="text-sm" id="languageSelectHeader">
+                            <option value="pt">Português</option>
+                            <option value="en">English</option>
+                            <option value="es">Español</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botão mobile -->
+            <button id="menuBtn" class="flex flex-col justify-between w-6 h-3 md:hidden">
+                <span class="block h-0.5 w-full bg-black"></span>
+                <span class="block h-0.5 w-full bg-black"></span>
+            </button>
+        </div>
+
+    </header>
+
+    <!-- Menu Mobile -->
+    <nav id="mobileMenu"
+        class="fixed top-0 left-0 py-16 w-full h-screen z-50 flex flex-col bg-[#111112] text-white text-4xl font-medium space-y-10 transform translate-y-full transition-transform duration-300 md:hidden">
+        <!-- Botão de fechar -->
+        <button id="closeMenu" class="absolute top-1 right-4 text-white text-5xl font-extralight focus:outline-none">
+            &times;
+        </button>
+
+        <a id="linkAbout" href="#quem-somos" class="hover:text-[#006eb6] px-8 w-full">Quem somos</a>
+        <a id="linkSolutions" href="#solucoes" class="hover:text-[#006eb6] px-8 w-full">Soluções</a>
+        <!-- Hiden
+        <a id="linkClients" href="#clientes" class="hover:text-[#006eb6] px-8 w-full">Clientes</a>
+        <a id="linkTeam" href="#time" class="hover:text-[#006eb6] px-8 w-full">Especialistas</a> -->
+        <a id="linkContact" href="#mapa-do-site" class="hover:text-[#006eb6] px-8 w-full">Contato</a>
+
+        <!-- Idioma Mobile -->
+        <div class="px-8 mt-auto">
+            <div class="relative ">
+                <div class="flex relative inline-block gap-2 text-left">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
+                    </svg>
+                    <select class="text-sm bg-[#111112] text-white" id="languageSelectHeader">
+                        <option value="pt">Português</option>
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- Seção banner -->
+    <section id="home" class="relative h-[70vh] flex flex-col md:flex-row">
+        <!-- Texto -->
+        <div class="basis-1/2 h-1/2 md:h-full flex items-center bg-[#006EB6] text-white order-1 md:order-none">
+            <div class="max-w-6xl w-full px-6 md:pr-0 mx-auto flex">
+                <div
+                    class="flex flex-col justify-center text-center md:text-left w-full md:max-w-[36rem] md:pr-6 ml-auto">
+                    <h1 id="service1Title" class="text-4xl md:text-5xl font-bold mb-4">
+                        Coordenação e Compatibilização
+                    </h1>
+                    <p id="service1Text2" class="text-lg md:text-xl font-light">
+                        Nosso escopo inclui também consultoria estratégica para implantação e gestão de processos BIM
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Imagem ou Video -->
+        <div class="basis-1/2 h-1/2 md:h-full order-2 md:order-none">
+            <video src="image/video-servico1.mp4" autoplay loop muted playsinline
+                class="object-cover w-full h-full">
+                Seu navegador não suporta vídeo.
+            </video>
+        </div>
+
+    </section>
+
+    <section id="quem-somos" class="bg-[#111112] text-white px-6 py-16">
+        <!-- Blocos -->
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10">
+            <!-- Bloco 1 -->
+            <div>
+                <h3 id="ServiceBloc1Title" class="font-semibold text-lg">Desenvolvimento de Planos de Execução BIM
+                    (BEP/PEB)</h3>
+                <p id="ServiceBloc1Text" class="text-gray-300 text-base">estruturamos diretrizes personalizadas para
+                    nossos clientes a fim garantir a aplicação eficaz da metodologia BIM em todas as fases do projeto e
+                    garantir o sucesso do projeto.</p>
+            </div>
+
+            <!-- Bloco 2 -->
+            <div>
+                <h3 id="ServiceBloc2Title" class="font-semibold text-lg">Configuração de Ambientes Colaborativos de
+                    Projeto</h3>
+                <p id="ServiceBloc2Text" class="text-gray-300 text-base">implantamos e organizamos plataformas como
+                    Autodesk Docs, Trimble Connect, entre outras, criando ambientes seguros, organizados e acessíveis
+                    para o compartilhamento e gestão de informações de um projeto em BIM.
+                </p>
+            </div>
+
+            <!-- Bloco 3 -->
+            <div>
+                <h3 id="ServiceBloc3Title" class="font-semibold text-lg">Padronização de entregáveis BIM</h3>
+                <p id="ServiceBloc3Text" class="text-gray-300 text-base">definimos nomenclaturas, estruturas de dados,
+                    templates, famílias e demais parâmetros técnicos para assegurar consistência e rastreabilidade nos
+                    modelos.</p>
+            </div>
+
+            <!-- Bloco 4 -->
+            <div>
+                <h3 id="ServiceBloc4Title" class="font-semibold text-lg">Treinamentos técnicos e suporte contínuo às
+                    equipes</h3>
+                <p id="ServiceBloc4Text" class="text-gray-300 text-base">promovendo a capacitação e o alinhamento com os
+                    fluxos de trabalho definidos.</p>
+            </div>
+
+            <!-- Bloco 5 -->
+            <div>
+                <h3 id="ServiceBloc5Title" class="font-semibold text-lg">Apoio na equalização técnica, processo de
+                    contratação e gestão das projetistas</h3>
+                <p id="ServiceBloc5Text" class="text-gray-300 text-base">atuamos diretamente na análise, validação
+                    técnica de propostas e gestão das projetistas, garantindo a aderência às exigências do projeto e às
+                    diretrizes BIM previamente definidas.</p>
+            </div>
+
+            <!-- Bloco 6 -->
+            <div>
+                <h3 id="ServiceBloc5Title" class="font-semibold text-lg">Desenvolvimento de relatórios personalizados
+                    dos ambientes de projeto</h3>
+                <p id="ServiceBloc5Text" class="text-gray-300 text-base">elaboramos relatórios periódicos e estratégicos
+                    com indicadores de uso, desempenho e organização das plataformas colaborativas, contribuindo para o
+                    controle, rastreamento e tomada de decisão ao longo do projeto.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Empresas que já utilizaram o serviço -->
+    <section class="bg-white px-6 py-12">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-2xl font-bold text-[#111112] mb-6">Quem utilizou este serviço</h2>
+            <div class="flex flex-wrap gap-6 items-center">
+                <!-- Exemplo de logos, substitua pelos seus arquivos -->
+                <img src="logos/gerdau-logo-mini.svg" alt="Gerdau"
+                    class="h-12 w-auto object-contain transition rounded-full" />
+                <img src="logos/usiminas-logo-mini.svg" alt="Usiminas"
+                    class="h-12 w-auto object-contain transition rounded-full" />
+                <img src="logos/draft-logo-mini.svg" alt="Draft Solutions"
+                    class="h-12 w-auto object-contain transition rounded-full" />
+                <!-- Adicione mais logos conforme necessário -->
+            </div>
+        </div>
+    </section>
+
+</body>
+
+<footer>
+    <section id="mapa-do-site" class="bg-gray-100 px-6 py-12">
+        <div class="max-w-6xl mx-auto">
+            <!-- Grid do Mapa -->
+            <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 text-sm text-gray-700">
+                <!-- Coluna 1 -->
+                <div>
+                    <h3 id="footerInstitutional" class="font-semibold mb-4">Institucional</h3>
+                    <ul class="space-y-2">
+                        <li><a id="footerAbout" href="#quem-somos" class="hover:underline">Sobre nós</a></li>
+                        <!-- Hiden
+                        <li><a id="footerTeam" href="#time" class="hover:underline">Nosso time</a></li> -->
+                    </ul>
+                </div>
+
+                <!-- Coluna 2 -->
+                <div>
+                    <h3 id="footerSolutions" class="font-semibold mb-4">Soluções</h3>
+                    <ul class="space-y-2">
+                        <!-- Serviço 1 -->
+                        <li><a id="footerCompat" href="#solucoes" class="hover:underline">Coordenação e
+                                Compatibilização</a></li>
+                        <!-- Serviço 2 -->
+                        <li><a id="footerBim" href="#solucoes" class="hover:underline">Modelagem BIM</a></li>
+                        <!-- Serviço 3 -->
+                        <li><a id="footer4d" href="#solucoes" class="hover:underline">Planejamento e Controle 4D</a>
+                        </li>
+                        <!-- Serviço 4 -->
+                        <li><a id="footer5d" href="#solucoes" class="hover:underline">Quantitativos e Orçamento 5D</a>
+                        </li>
+                        <!-- Serviço 5 -->
+                        <li><a id="footerCloud" href="#solucoes" class="hover:underline">Laser Scanning e Modelagem
+                                As-Built</a></li>
+                        <!-- Serviço 6 -->
+                        <li><a id="footerConsulting" href="#solucoes" class="hover:underline">Consultoria e
+                                Treinamentos</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3 -->
+                <div>
+                    <h3 id="footerLegal" class="font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a id="footerPrivacy" href="privacidade.html" class="hover:underline">Política de
+                                Privacidade</a></li>
+                        <li><a id="footerTerms" href="termos.html" class="hover:underline">Termos de Uso</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 4 -->
+                <div>
+                    <h3 id="footerContactTitle" class="font-semibold mb-4">Fale conosco</h3>
+                    <ul class="space-y-2">
+                        <li><a id="footerPhone" href="" class="hover:underline">+55 (31) 98396-4334</a></li>
+                        <li><a id="footerEmail" href="" class="hover:underline break-all">joao.hamacek@voxcs.com.br</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Linha divisória de largura total -->
+        <hr class="my-10 w-full border-t border-gray-300" />
+
+        <!-- Rodapé com logo e direitos -->
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-sm text-black">
+            <!-- Seletor de idioma -->
+            <div class="w-full md:w-auto relative">
+                <select id="languageSwitcher"
+                    class="border border-black bg-transparent hover:bg-white px-4 py-2 text-sm w-full md:w-auto pr-10 appearance-none">
+                    <option value="pt">Português</option>
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                </select>
+
+                <!-- Ícone personalizado (seta para baixo) -->
+                <div class="pointer-events-none absolute inset-y-0 right-3 flex items-center">
+                    <svg class="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+            </div>
+            <p id="footerCopy">&copy; 2025 Vox. Todos os direitos reservados.</p>
+        </div>
+
+    </section>
+
+</footer>
+
+<script src="js/lang.js" defer></script>
+<script src="js/menu.js" defer></script>
+<script src="js/navbar-scroll.js" defer></script>
+<script src="js/dynamic-page.js"></script>
+
+</html>

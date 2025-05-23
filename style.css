@@ -4,7 +4,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Coloque fora do @media */
 .animate-slideUp {
     animation: slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }

@@ -20,15 +20,70 @@
     <header id="navbar" class="fixed top-0 left-0 right-0 z-40 px-6 py-4 bg-white transition-transform duration-300">
         <div class="max-w-6xl mx-auto w-full flex items-center justify-between">
             <a href="index.html"><img class="w-16" src="logos/vox-logo-black.svg" alt="Vox"></a>
-            <div class="flex items-center space-x-4 border-l pl-4 ml-4">
+
+            <!-- Menu Desktop + Idioma -->
+            <div class="hidden md:flex items-center space-x-8 text-black font-medium">
+                <!-- Navegação -->
+                <nav class="flex space-x-8">
+                    <a id="linkAbout" href="#quem-somos" class="hover:text-[#006eb6]">Quem somos</a>
+                    <!-- Hiden
+                    <a id="linkSolutions" href="#solucoes" class="hover:text-[#006eb6]">Soluções</a>                    
+                    <a id="linkClients" href="#clientes" class="hover:text-[#006eb6]">Clientes</a>
+                    <a id="linkTeam" href="#time" class="hover:text-[#006eb6]">Especialistas</a> -->
+                    <a id="linkContact" href="#mapa-do-site" class="hover:text-[#006eb6]">Contato</a>
+                </nav>
+
                 <!-- Idioma -->
+                <div class="flex items-center space-x-4 border-l pl-4 ml-4">
+                    <div class="flex relative inline-block gap-2 text-left">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
+                        </svg>
+                        <select class="text-sm" id="languageSelectHeader">
+                            <option value="pt">Português</option>
+                            <option value="en">English</option>
+                            <option value="es">Español</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botão mobile -->
+            <button id="menuBtn" class="flex flex-col justify-between w-6 h-3 md:hidden">
+                <span class="block h-0.5 w-full bg-black"></span>
+                <span class="block h-0.5 w-full bg-black"></span>
+            </button>
+        </div>
+
+    </header>
+
+    <!-- Menu Mobile -->
+    <nav id="mobileMenu"
+        class="fixed top-0 left-0 py-16 w-full h-screen z-50 flex flex-col bg-[#111112] text-white text-4xl font-medium space-y-10 transform translate-y-full transition-transform duration-300 md:hidden">
+        <!-- Botão de fechar -->
+        <button id="closeMenu" class="absolute top-1 right-4 text-white text-5xl font-extralight focus:outline-none">
+            &times;
+        </button>
+
+        <a id="linkAbout" href="#quem-somos" class="hover:text-[#006eb6] px-8 w-full">Quem somos</a>
+        <a id="linkSolutions" href="#solucoes" class="hover:text-[#006eb6] px-8 w-full">Soluções</a>
+        <!-- Hiden
+        <a id="linkClients" href="#clientes" class="hover:text-[#006eb6] px-8 w-full">Clientes</a>
+        <a id="linkTeam" href="#time" class="hover:text-[#006eb6] px-8 w-full">Especialistas</a> -->
+        <a id="linkContact" href="#mapa-do-site" class="hover:text-[#006eb6] px-8 w-full">Contato</a>
+
+        <!-- Idioma Mobile -->
+        <div class="px-8 mt-auto">
+            <div class="relative ">
                 <div class="flex relative inline-block gap-2 text-left">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
                     </svg>
-                    <select class="text-sm" id="languageSelectHeader">
+                    <select class="text-sm bg-[#111112] text-white" id="languageSelectHeader">
                         <option value="pt">Português</option>
                         <option value="en">English</option>
                         <option value="es">Español</option>
@@ -36,20 +91,74 @@
                 </div>
             </div>
         </div>
-    </header>
 
-    <section class="relative h-[70vh]">
-        <div class="absolute inset-0 bg-[#111112] flex items-center justify-center">
-            <div class="max-w-6xl text-center text-white px-4 md:px-10">
-                <h1 id="termosTitle" class="text-4xl md:text-5xl font-bold mb-4">
-                    Política de Privacidade
-                </h1>
-                <p id="termosDescription" class="text-lg md:text-2xl font-light">
-                    Sua privacidade é importante para nós. Esta política explica como coletamos, usamos e protegemos
-                    suas informações.
-                </p>
+    </nav>
+
+    <section id="home" class="relative h-full md:h-[70vh] flex flex-col md:flex-row">
+        <!-- Texto -->
+        <div class="md:basis-1/2 md:h-1/2 md:h-full flex items-center bg-[#111112] text-white order-1 md:order-none">
+            <div class="max-w-6xl w-full px-6 md:pr-0 mx-auto flex">
+                <div
+                    class="min-h-[50vh] flex flex-col justify-center py-32 text-center md:text-left w-full md:max-w-[36rem] md:pr-6 ml-auto">
+                    <h1 id="termosTitle" class="text-4xl md:text-5xl font-bold mb-4">
+                        Política de Privacidade
+                    </h1>
+                    <p id="termosDescription" class="text-lg md:text-2xl font-light">
+                        Sua privacidade é importante para nós. Esta política explica como coletamos, usamos e protegemos
+                        suas informações.
+                    </p>
+                </div>
             </div>
         </div>
+        <!-- Imagem ou Video -->
+        <div class="basis-1/2 h-1/2 md:h-full order-2 md:order-none bg-gray-100 flex items-center justify-center">
+            <svg class="min-h-[50vh] size-[192px] md:size-[256px]" viewBox="0 0 154 154" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M17.9242 73.3079C16.4095 60.6507 17.091 47.9405 19.8605 35.4273C20.263 33.6099 21.9287 35.2633 33.6715 32.6333C34.5699 32.4324 35.4606 32.2224 36.3429 32.0055C36.7384 31.2734 37.1769 30.5444 37.6644 29.8269C27.4394 32.2546 19.4152 33.0794 19.1293 33.3285C18.6218 33.7701 18.4639 33.9571 18.109 35.4779C14.6917 50.1267 14.6028 65.647 17.3478 80.5235C17.4835 78.1571 17.6759 75.7264 17.9235 73.3072L17.9242 73.3079Z"
+                    fill="black" />
+                <path
+                    d="M132.49 43.0254C130.482 41.1029 127.096 39.0416 125.658 38.5303C123.656 37.8175 105.874 36.1126 80.6985 21.1151C71.2914 15.5116 72.4635 14.5212 68.965 17.024C67.74 17.9002 66.4576 18.7304 65.1307 19.5161C65.7087 19.6042 66.282 19.7069 66.8516 19.825C71.4555 16.9734 70.7526 16.3832 71.8365 17.1957C82.8043 25.4208 102.402 35.156 121.402 39.0232C123.451 39.4402 124.603 38.8569 124.28 40.7779C123.802 43.6241 122.676 60.8454 114.426 80.8876C103.635 107.101 81.3608 131.193 60.2807 142.366C58.6809 143.213 57.0681 144.377 54.8842 142.672C49.8986 138.777 46.3747 135.717 41.7701 130.228C33.7665 120.688 31.1235 116.048 27.6058 107.742C27.0469 107.529 26.4536 107.301 25.7806 107.048C25.7024 107.019 25.625 106.99 25.5483 106.961C30.9602 119.031 38.3942 129.838 47.4985 138.298C49.2002 139.879 61.0887 150.196 63.4588 149.506C70.5763 147.435 90.5955 134.084 104.507 116.875C129.636 85.7881 133.905 44.3814 132.49 43.0269L132.49 43.0254ZM131.482 44.0679C128.156 84.2474 106.565 123.079 70.2474 144.747C62.3542 149.455 62.8816 148.743 61.268 147.544C60.8587 147.239 58.5935 145.531 58.5368 145.473C57.8485 144.78 57.6131 145.656 63.1001 142.612C81.7388 132.27 97.6431 114.538 108.015 97.4083C116.677 83.1022 120.566 71.1179 123.372 57.1897C127.199 38.2015 124.58 39.3337 127.284 40.8361C128.637 41.5873 129.864 42.531 131.149 43.3841C131.493 43.6126 131.491 43.6202 131.482 44.0679Z"
+                    fill="black" />
+                <path
+                    d="M48.4444 45.9383C74.1836 46.5983 73.8639 49.7956 74.1782 46.7754C75.2031 36.9183 69.7867 31.3807 61.0358 30.8748C56.625 33.0503 52.143 34.6961 47.943 35.9509C46.8308 37.4763 45.9945 39.323 45.3813 41.4655C44.9344 43.0277 44.804 44.1683 44.8071 45.5642C44.8078 46.0663 44.7742 45.844 48.4444 45.9383Z"
+                    fill="black" />
+                <path
+                    d="M31.5888 46.4902C32.7447 46.4687 32.3722 45.8969 32.4258 45.6209C32.6343 44.5485 32.8651 42.1362 33.6094 39.185C29.7759 39.8074 27.2945 40.0489 27.0255 40.2497C26.7265 40.472 26.4659 40.7464 26.3854 41.1451C25.8795 43.6348 25.4671 46.0786 25.1405 48.4748C27.037 47.3012 29.6708 46.5262 31.5888 46.4902Z"
+                    fill="black" />
+                <path
+                    d="M113.677 44.8958C112.703 44.5577 101.186 43.0507 86.1947 35.5975C85.9946 35.4986 85.7984 35.3998 85.6037 35.3024C85.872 36.154 86.0905 37.0379 86.2553 37.9531C87.8528 46.8213 85.0633 49.7519 86.3779 50.1114C92.8859 51.8936 96.0403 53.0672 97.2315 60.3977C98.632 69.0176 95.3236 91.1839 92.2788 103.374C102.15 89.4055 111.899 65.8808 114.494 46.271C114.507 45.289 114.408 45.1487 113.678 44.8958H113.677Z"
+                    fill="black" />
+                <path
+                    d="M73.9981 114.516C64.9298 114.516 57.8615 115.265 37.3494 110.606C46.5235 125.756 57.3885 133.534 58.9968 133.044C62.9629 131.834 68.4774 127.433 70.7549 125.702C76.7186 121.17 80.5115 117.631 84.0698 113.628C80.8419 114.315 77.036 114.348 73.9981 114.516Z"
+                    fill="black" />
+                <path
+                    d="M97.2315 60.3977C96.0403 53.0672 92.8859 51.8936 86.3779 50.1114C85.0633 49.7511 87.8528 46.8214 86.2553 37.9531C83.2266 21.1389 62.1581 15.0862 47.1337 21.8755C33.8348 27.8853 33.0338 42.485 32.4251 45.6217C32.3715 45.8977 32.744 46.4687 31.5881 46.4902C28.7035 46.5446 24.1985 48.2694 23.0219 50.5077C17.6721 60.6859 15.6768 92.2969 18.1811 99.9218C18.8871 102.071 18.5475 104.343 25.7799 107.048C29.4724 108.43 30.774 109.106 37.026 110.533C57.788 115.274 64.8824 114.517 73.9982 114.517C79.8607 114.192 88.5863 114.374 90.4935 109.379C93.782 100.767 98.9164 70.7714 97.2307 60.3985L97.2315 60.3977ZM34.1138 46.0579C34.1598 43.9483 35.8348 36.5151 38.2356 32.3566C40.7192 28.0539 43.2028 25.9551 46.5711 24.051C50.7756 21.6747 58.5821 20.7487 59.5135 20.7303C64.887 20.6237 70.144 22.232 74.2972 24.4343C80.29 27.6116 82.7682 31.3738 83.9832 36.1847C85.0801 40.5287 85.0457 45.716 84.4539 48.9531C84.23 50.1758 84.4102 49.5825 76.0955 48.3866C75.8011 48.3445 75.7298 48.2694 75.7743 47.9375C78.7914 25.4254 51.3497 24.5945 44.9897 37.7055C43.1898 41.4156 43.278 45.7896 43.2749 45.8103C43.199 46.2388 39.7373 45.9276 39.7373 46.0448C33.8762 46.0448 34.1069 46.3959 34.1138 46.0579ZM74.1783 46.7754C73.8641 49.7956 74.1837 46.5983 48.4445 45.9383C44.7743 45.844 44.8072 46.0671 44.8065 45.5642C44.8042 44.1683 44.9337 43.0269 45.3806 41.4655C47.3744 34.496 51.7345 30.6494 60.2379 30.8426C69.4556 31.0519 75.2331 36.6224 74.1776 46.7746L74.1783 46.7754ZM90.4054 103.357C88.916 109.878 88.998 110.484 82.9844 111.857C79.7013 112.607 64.7935 112.967 61.4536 112.542C59.0129 112.232 58.8887 113.474 41.6552 109.89C16.1329 104.584 20.7284 102.487 18.927 93.9519C17.8883 70.8857 22.6892 53.6812 24.1211 51.7135C25.2863 50.1129 26.2651 49.9037 27.2264 49.2145C27.5284 48.9984 27.4042 49.1371 28.9396 48.6273C30.0481 48.2594 31.7751 48.2027 31.7935 48.2027C47.609 46.9034 60.9216 48.2349 76.6443 50.3751C84.4171 51.4329 93.6057 52.1826 95.03 58.1586C97.3909 68.0655 92.5548 93.9527 90.4061 103.357L90.4054 103.357Z"
+                    fill="black" />
+                <path
+                    d="M46.0268 65.575C43.6214 70.0087 44.4178 75.9119 48.8201 79.7546C49.0064 79.9171 49.0792 80.0988 49.0447 80.3341C48.7028 82.6898 48.1647 88.2373 48.1777 91.1701C48.2 96.0699 48.4062 98.7789 52.5501 100.529C55.4837 101.768 58.5438 100.62 59.7733 96.8081C60.2877 95.2121 60.3207 94.037 60.9308 88.5048C61.6951 81.5806 61.0972 81.796 61.7901 81.4955C65.0993 80.0605 68.3066 75.9426 68.2253 71.0727C68.696 60.0949 51.8319 54.8747 46.026 65.5742L46.0268 65.575ZM52.7395 84.9089C51.2577 98.8992 53.3543 100.35 50.9849 98.4554C49.3751 97.1684 49.3053 94.0999 49.3299 91.8577C49.4295 82.7725 51.1014 80.1279 50.0949 79.2456C46.4062 76.0154 44.5274 70.73 47.7638 65.4968C48.5173 64.2788 50.2497 62.9795 50.3662 62.8691C51.6663 61.6403 53.6402 61.5077 52.8821 62.3455C47.9041 67.8524 49.8174 73.9388 53.3957 76.7084C54.0871 77.2434 53.5689 77.0671 52.738 84.9081L52.7395 84.9089Z"
+                    fill="black" />
+                <path
+                    d="M86.6232 61.1321C86.3795 71.0374 82.802 110.45 81.1685 105.849C80.7545 104.684 85.5094 62.1715 85.4788 60.4468C85.4136 56.7919 84.5137 56.3664 85.0541 56.0721C85.4466 55.8582 85.9004 56.5029 86.0422 56.877C86.5573 58.2368 86.66 59.6779 86.624 61.1329L86.6232 61.1321Z"
+                    fill="black" />
+                <path
+                    d="M14.4847 131.45C14.0447 131.301 18.1174 127.106 18.0431 126.327C17.981 125.676 17.206 125.299 16.6809 125.766C15.9665 126.402 14.6304 127.809 13.5909 128.869C13.1525 129.317 13.3824 125.63 11.8662 122.796C11.5052 122.122 10.6206 122.283 10.5953 123.102C10.5439 124.772 11.3848 129.199 11.67 130.535C10.2288 130.17 6.08721 129.029 6.05271 130.535C6.04505 130.871 6.23745 131.07 6.49654 131.198C9.60104 132.727 10.435 132.378 10.11 132.811C8.37916 135.114 7.82954 135.719 7.53215 136.605C7.31982 137.236 7.48693 137.939 8.18369 137.944C8.94641 137.95 9.19937 137.319 10.8942 135.271C13.1379 132.561 11.9513 133.273 13.4384 137.387C13.8086 138.411 13.9014 138.668 14.3828 138.596C15.2137 138.472 14.6618 135.727 14.4886 134.229C14.405 133.507 18.5881 135.891 19.1844 134.367C19.6819 133.096 17.4528 132.457 14.4847 131.448V131.45Z"
+                    fill="black" />
+                <path
+                    d="M117.782 12.6079C117.186 12.4263 119.246 11.5125 120.74 9.43671C121.171 8.83803 120.63 8.20333 119.161 9.11782C116.133 11.002 116.096 11.7019 116.005 11.2373C115.675 9.55246 115.498 8.26235 114.968 7.31412C114.409 6.313 112.937 6.01635 113.385 9.19141C113.938 13.1123 114.585 11.5922 111.325 11.7586C109.838 11.8345 109.305 12.7298 109.757 13.3185C110.023 13.6658 110.468 13.734 111.381 13.9287C113.163 14.3081 112.818 13.6412 109.962 16.4445C109.662 16.7396 109.279 17.3981 109.683 17.8496C110.386 18.6368 111.595 17.4311 114.227 15.3583C114.582 15.0785 114.288 15.3506 115.157 17.8159C115.448 18.6414 115.629 19.2003 116.23 19.2041C116.736 19.2079 117.259 18.6637 117.125 17.6626C116.406 12.309 115.977 15.934 120.695 14.3932C122.321 13.862 119.31 13.074 117.782 12.6079Z"
+                    fill="black" />
+                <path
+                    d="M116.355 141.089C115.732 143.452 119.428 143.546 119.221 141.489C119.36 140.028 116.88 139.096 116.355 141.089Z"
+                    fill="black" />
+                <path
+                    d="M32.4948 3.89838C31.4408 3.83399 28.3056 5.01984 29.4256 7.36088C30.291 9.16995 32.8053 9.63141 34.2686 7.9956C35.9144 6.15587 34.2387 3.7742 32.4948 3.89838ZM32.1215 7.51726C30.4949 7.63224 30.2266 5.74653 30.7954 5.55259C31.3243 5.37245 31.8325 5.0988 32.4182 5.13712C34.0877 5.24674 33.5987 7.64527 32.1215 7.51726Z"
+                    fill="black" />
+                <path
+                    d="M147.043 90.645C145.796 87.8425 141.616 88.9333 140.372 90.3277C137.88 93.1187 141.645 98.5489 145.497 95.2596C146.8 94.1466 147.683 92.0808 147.043 90.645ZM142.896 94.7024C142.359 94.7759 141.054 93.5165 141.385 92.0355C141.602 91.0628 142.554 90.307 143.005 90.3882C143.297 90.4411 143.602 90.3974 143.901 90.4181C146.743 90.6151 145.234 94.5943 142.896 94.7024Z"
+                    fill="black" />
+            </svg>
+        </div>
+
     </section>
 
     <section>
@@ -77,10 +186,78 @@
 </body>
 
 <footer>
-    <section id="mapa-do-site" class="bg-gray-100 py-12">
+    <section id="mapa-do-site" class="bg-gray-100 px-6 py-12">
+        <div class="max-w-6xl mx-auto">
+            <!-- Grid do Mapa -->
+            <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 text-sm text-gray-700">
+                <!-- Coluna 1 -->
+                <div>
+                    <h3 id="footerInstitutional" class="font-semibold mb-4">Institucional</h3>
+                    <ul class="space-y-2">
+                        <li><a id="footerAbout" href="#quem-somos" class="hover:underline">Sobre nós</a></li>
+                        <!-- Hiden
+                        <li><a id="footerTeam" href="#time" class="hover:underline">Nosso time</a></li> -->
+                    </ul>
+                </div>
+
+                <!-- Coluna 2 -->
+                <div>
+                    <h3 id="footerSolutions" class="font-semibold mb-4">Soluções</h3>
+                    <ul class="space-y-2">
+                        <!-- Serviço 1 -->
+                        <li><a id="footerCompat" href="coordenacao.html" class="hover:underline">Coordenação e
+                                Compatibilização</a>
+                        </li>
+
+                        <!-- Serviço 2 -->
+                        <li><a id="footerBim" href="modelagem.html" class="hover:underline">Modelagem BIM</a></li>
+
+                        <!-- Serviço 3 -->
+                        <li><a id="footer4d" href="planejamento.html" class="hover:underline">Planejamento e Controle
+                                4D</a></li>
+
+                        <!-- Serviço 4 -->
+                        <li><a id="footer5d" href="quantitativos.html" class="hover:underline">Quantitativos e Orçamento
+                                5D</a></li>
+
+                        <!-- Serviço 5 -->
+                        <li><a id="footerCloud" href="laser.html" class="hover:underline">Laser Scanning e Modelagem
+                                As-Built</a>
+                        </li>
+
+                        <!-- Serviço 6 -->
+                        <li><a id="footerConsulting" href="consultoria.html" class="hover:underline">Consultoria e
+                                Treinamentos</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3 -->
+                <div>
+                    <h3 id="footerLegal" class="font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a id="footerPrivacy" href="privacidade.html" class="hover:underline">Política de
+                                Privacidade</a></li>
+                        <li><a id="footerTerms" href="termos.html" class="hover:underline">Termos de Uso</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 4 -->
+                <div>
+                    <h3 id="footerContactTitle" class="font-semibold mb-4">Fale conosco</h3>
+                    <ul class="space-y-2">
+                        <li><a id="footerPhone" href="" class="hover:underline">+55 (31) 98396-4334</a></li>
+                        <li><a id="footerEmail" href="" class="hover:underline break-all">joao.hamacek@voxcs.com.br</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Linha divisória de largura total -->
+        <hr class="my-10 w-full border-t border-gray-300" />
+
         <!-- Rodapé com logo e direitos -->
-        <div
-            class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-6 text-sm text-black">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-sm text-black">
             <!-- Seletor de idioma -->
             <div class="w-full md:w-auto relative">
                 <select id="languageSwitcher"
@@ -100,6 +277,7 @@
             </div>
             <p id="footerCopy">&copy; 2025 Vox. Todos os direitos reservados.</p>
         </div>
+
     </section>
 
 </footer>

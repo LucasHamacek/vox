@@ -68,8 +68,8 @@
         </button>
 
         <a id="linkAbout" href="#quem-somos" class="hover:text-[#006eb6] px-8 w-full">Quem somos</a>
-        <a id="linkSolutions" href="#solucoes" class="hover:text-[#006eb6] px-8 w-full">Soluções</a>
         <!-- Hiden
+        <a id="linkSolutions" href="#solucoes" class="hover:text-[#006eb6] px-8 w-full">Soluções</a>
         <a id="linkClients" href="#clientes" class="hover:text-[#006eb6] px-8 w-full">Clientes</a>
         <a id="linkTeam" href="#time" class="hover:text-[#006eb6] px-8 w-full">Especialistas</a> -->
         <a id="linkContact" href="#mapa-do-site" class="hover:text-[#006eb6] px-8 w-full">Contato</a>
@@ -95,26 +95,17 @@
     </nav>
 
     <!-- Seção banner -->
-    <section id="home" class="relative h-full md:h-[70vh] flex flex-col md:flex-row">
-        <!-- Texto -->
-        <div class="md:basis-1/2 md:h-1/2 md:h-full flex items-center bg-[#006EB6] text-white order-1 md:order-none">
-            <div class="max-w-6xl w-full px-6 md:pr-0 mx-auto flex">
-                <div
-                    class="min-h-[50vh] flex flex-col justify-center py-32 text-center md:text-left w-full md:max-w-[36rem] md:pr-6 ml-auto">
-                    <h1 id="service1Title" class="text-4xl md:text-5xl font-bold mb-4">
-                        Coordenação e Compatibilização
-                    </h1>
-                    <p id="service1Text2" class="text-lg md:text-xl font-light">
-                        Nosso escopo inclui também consultoria estratégica para implantação e gestão de processos BIM
-                    </p>
-                </div>
+    <section id="home" class="relative h-[70vh] bg-cover bg-center"
+        style="background-image: url(image/banner-service.jpeg);">
+        <div class="absolute inset-0 bg-[#006EB6] bg-opacity-90 flex items-center justify-center px-6">
+            <div class="max-w-6xl text-center text-white">
+                <h1 id="service1Title" class="text-4xl md:text-5xl font-bold mb-4">
+                    Coordenação e Compatibilização
+                </h1>
+                <p id="service1Text2" class="text-lg md:text-2xl font-light">
+                    Nosso escopo inclui também consultoria estratégica para implantação e gestão de processos BIM
+                </p>
             </div>
-        </div>
-        <!-- Imagem ou Video -->
-        <div class="basis-1/2 h-1/2 md:h-full order-2 md:order-none">
-            <video src="image/video-servico1.mp4" autoplay loop muted playsinline class="object-cover w-full h-full">
-                Seu navegador não suporta vídeo.
-            </video>
         </div>
 
     </section>

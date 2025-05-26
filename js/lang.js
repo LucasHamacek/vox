@@ -136,9 +136,17 @@ const translations = {
     privacy2Text: "Utilizamos suas informações apenas para fins internos e não as compartilhamos com terceiros sem sua autorização.",
     privacy3Title: "3. Segurança",
     privacy3Text: "Adotamos medidas de segurança para proteger seus dados pessoais.",
-    privacyTermsBackButton: "Voltar para o site"
-
+    privacyTermsBackButton: "Voltar para o site",
+    contactTitle: "Fale conosco",
+    contactText: "Tem dúvidas, sugestões ou deseja saber mais sobre nossos serviços? Preencha o formulário abaixo e nossa equipe retornará o mais breve possível.",
+    contactName: "Nome",
+    contactMail: "E-mail",
+    contactMessage: "Mensagem",
+    contactSend: "Enviar",
+    successTitle: "Mensagem enviada!",
+    successText: "Obrigado pelo contato. Em breve nossa equipe retornará para você."
   },
+  
   en: {
     mainTitle: "We transform projects into intelligent solutions.",
     mainDescription: "With technology and innovation, we drive the construction of the future.",
@@ -276,9 +284,17 @@ const translations = {
     privacy2Text: "We use your information for internal purposes only and do not share it with third parties without your consent.",
     privacy3Title: "3. Security",
     privacy3Text: "We implement security measures to protect your personal data.",
-    privacyTermsBackButton: "Back to the website"
-
+    privacyTermsBackButton: "Back to the website",
+    contactTitle: "Contact us",
+    contactText: "Have questions, suggestions, or want to know more about our services? Fill out the form below and our team will get back to you as soon as possible.",
+    contactName: "Name",
+    contactMail: "Email",
+    contactMessage: "Message",
+    contactSend: "Send",
+    successTitle: "Message sent!",
+    successText: "Thank you for reaching out. Our team will get back to you shortly."
   },
+
   es: {
     mainTitle: "Transformamos proyectos en soluciones inteligentes.",
     mainDescription: "Con tecnología e innovación, impulsamos la construcción del futuro.",
@@ -416,7 +432,15 @@ const translations = {
     privacy2Text: "Utilizamos tu información solo con fines internos y no la compartimos con terceros sin tu autorización.",
     privacy3Title: "3. Seguridad",
     privacy3Text: "Adoptamos medidas de seguridad para proteger tus datos personales.",
-    privacyTermsBackButton: "Volver al sitio web"
+    privacyTermsBackButton: "Volver al sitio web",
+    contactTitle: "Contáctanos",
+    contactText: "¿Tienes dudas, sugerencias o quieres saber más sobre nuestros servicios? Rellena el formulario abajo y nuestro equipo te responderá lo antes posible.",
+    contactName: "Nombre",
+    contactMail: "Correo electrónico",
+    contactMessage: "Mensaje",
+    contactSend: "Enviar",
+    successTitle: "¡Mensaje enviado!",
+    successText: "Gracias por tu contacto. Nuestro equipo te responderá en breve."
   }
 };
 
